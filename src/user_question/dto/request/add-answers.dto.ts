@@ -13,6 +13,8 @@ export class AddAnswersDto {
   @ApiProperty()
   bandName: string;
   @ApiProperty()
+  audioUrl: string;
+  @ApiProperty()
   city: string;
   @ApiProperty()
   country: string;

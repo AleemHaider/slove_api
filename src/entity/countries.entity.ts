@@ -63,6 +63,7 @@ export class CountriesEntity extends BaseEntity {
     nullable: true,
   })
   currencyName: string;
+  
 
   @OneToMany(() => CitiesEntity, (cities) => cities.country)
   city: CitiesEntity[];

@@ -51,7 +51,7 @@ export class S3BucketService {
     userFolderName: string,
   ): Promise<{ key: string; url: string }> {
     const userFileName =
-      `images/${userFolderName}/profile-image/` +
+      `audioUrl/${userFolderName}/AudioUrl/` +
       this.setFilename(file, userFolderName);
     try {
       return await this.uploadFile(file.buffer, userFileName);

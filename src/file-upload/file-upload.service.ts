@@ -36,6 +36,15 @@ export class FileUploadService {
         );
         return data.key;
       }
+      else if(dto.type === SINGLE_FILE_UPLOAD_TYPE.AUDIO_URL)
+      {
+        const data = await this.s3BucketService.uploadProfileImage(
+          file,
+          folderName,
+        );
+        return data.key;
+
+      }
     } catch (e) {
       this.logger.error(e);
       throw new InternalServerErrorException(

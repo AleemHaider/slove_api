@@ -27,6 +27,11 @@ export class UserQuestionEntity extends BaseEntity {
   @Column({ name: 'booking_price', type: 'numeric', nullable: true })
   bookingPrice: number;
 
+  @Column({ name: 'audioUrl', type: 'varchar', nullable: true })
+  audioUrl:string;
+
+
+
   @Column({
     name: 'website_link',
     type: 'text',

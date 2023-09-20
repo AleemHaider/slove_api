@@ -134,6 +134,7 @@ export class UserQuestionService {
   ) {
     entity.bandName = dto.bandName;
     entity.city = dto.city;
+    entity.audioUrl = dto.audioUrl;
     entity.country = dto.country;
     entity.mobilePhone = dto.mobilePhone;
     entity.activeTime = dto.activeTime;
@@ -160,6 +161,7 @@ export class UserQuestionService {
     entity.rating = dto.rating;
     entity.phoneCode = dto.phoneCode;
     entity.countryCode = dto.countryCode;
+    entity.audioUrl=dto.audioUrl;
     if (dto.openHours) {
       entity.openingStartAt = dto.openHours.split('-')[0];
       entity.openingEndAt = dto.openHours.split('-')[1];

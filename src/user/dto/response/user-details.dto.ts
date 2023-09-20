@@ -18,6 +18,7 @@ export class UserDetailsDto {
     const userDetails: UserProfileInterface = {
       countryCode: userQuestion.countryCode,
       phoneCode: userQuestion.phoneCode,
+      audioUrl:userQuestion.audioUrl,
       countryId: userQuestion.countryId
         ? {
             id: userQuestion.countryId.id,
@@ -152,6 +153,7 @@ export class UserDetailsDto {
       venueName: userQuestionEntity.venueName,
       venueType: venueList,
       websiteLink: userQuestionEntity.websiteLink,
+      audioUrl:userQuestionEntity.audioUrl,
       youtube: userQuestionEntity.youtube,
       profileCompletion: Math.floor(completePercentage),
       consumerName: userQuestionEntity.consumerName,
@@ -237,7 +239,7 @@ export class UserDetailsDto {
         userType: data[i].user_type,
         venueCapacity: data[i].venue_capacity,
         venueName: data[i].venue_name,
-
+        audioUrl: data[i].audioUrl,
         venueType: data[i].venueType,
         websiteLink: data[i].website_link,
         youtube: data[i].youtube,
@@ -313,6 +315,7 @@ export interface UserProfileInterface {
   userId: number;
   email: string;
   profileImage: string;
+  audioUrl:string;
   bio: string;
   genreType: MusicGenreEntity[];
   venueType: PreferredVenueEntity[];
